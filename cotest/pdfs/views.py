@@ -6,7 +6,7 @@ import tempfile
 # Create your views here.
 import os
 
-dirname = os.path.dirname('D:/')
+dirname = os.path.dirname(__file__)
 
 # def genpdf(request):
 #     # return render(request,'ticket.html')
@@ -34,11 +34,11 @@ def genpdf(request):
 
     if os.path.exists(dirname):
 
-        f = open(os.path.join(dirname, 'mypdf.pdf'), 'wb')
+        f = open(os.path.join(dirname, 'mypdfs.pdf'), 'wb')
         f.write(pdf) 
         
         # f.open(pdf)
-        os.startfile(dirname+'d.pdf',"print")
+        # os.startfile(dirname+'d.pdf',"print")
         
         
 
